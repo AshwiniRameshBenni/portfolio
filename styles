@@ -10,7 +10,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/AshwiniRameshBenni/portfolio/42cc0927d65a4cd7e79b1525bb53a012ff56255e/background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
