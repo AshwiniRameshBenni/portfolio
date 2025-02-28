@@ -19,25 +19,12 @@ body {
     color: white;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    color: #f8f8f8;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
 .navigation-page {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #141e30, #243b55);
+    background: url('navigation-background.jpg') no-repeat center center/cover;
 }
 
 .nav-container {
