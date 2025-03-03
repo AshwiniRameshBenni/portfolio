@@ -1,24 +1,21 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+let currentSection = 0;
+const sections = document.querySelectorAll(".experience-section");
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) {
-            slide.classList.add("active");
-        }
+function showSection(index) {
+    sections.forEach((section, i) => {
+        section.style.display = i === index ? "flex" : "none";
     });
 }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+function nextExperience() {
+    currentSection = (currentSection + 1) % sections.length;
+    showSection(currentSection);
 }
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
+function prevExperience() {
+    currentSection = (currentSection - 1 + sections.length) % sections.length;
+    showSection(currentSection);
 }
 
-// Show first slide by default
-showSlide(currentSlide);
+// Show the first section by default
+showSection(currentSection);
