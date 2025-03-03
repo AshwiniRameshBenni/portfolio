@@ -20,37 +20,35 @@
 
     <section id="navigation" class="navigation-page">
         <div class="nav-container">
-            <a href="#about" class="nav-item"><i class="fas fa-user"></i> About</a>
+            <a href="#about" class="nav-item" onclick="openAboutSlide()"><i class="fas fa-user"></i> About</a>
             <a href="#experience" class="nav-item"><i class="fas fa-briefcase"></i> Experience</a>
             <a href="#projects" class="nav-item"><i class="fas fa-project-diagram"></i> Projects</a>
             <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
         </div>
     </section>
 
-    <section id="about" class="hidden">
-        <h2>About Me</h2>
-        <p>Master of Science in Data Science candidate with expertise in financial data analysis, predictive modeling, and cloud computing.</p>
-    </section>
-
-    <section id="experience" class="hidden">
-        <h2>Work Experience</h2>
-        <h3>Data Analyst Intern - Romark Logistics</h3>
-        <p>Developed Azure-based ETL pipelines, optimizing financial reporting and reducing manual processes by 40%.</p>
-    </section>
-
-    <section id="projects" class="hidden">
-        <h2>Projects</h2>
-        <h3>AI-Driven Financial Advisory System</h3>
-        <p>Developed an NLP-based sentiment analysis model using PySpark to assess financial news.</p>
-    </section>
-
-    <section id="contact" class="hidden">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:abenni@stevens.edu">abenni@stevens.edu</a></p>
+    <section id="about-slide" class="slide hidden">
+        <div class="about-container">
+            <img src="my-photo.jpg" alt="My Photo" class="about-img">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Graduate Data Science student with expertise in designing and optimizing large-scale data engineering solutions. 
+                   Proficient in building distributed data pipelines, optimizing cloud-based workflows, and driving predictive analytics to 
+                   extract strategic insights. Adept at handling structured and unstructured data, ensuring high performance, and 
+                   collaborating with cross-functional teams to enhance data infrastructure. Passionate about leveraging big data, cloud 
+                   computing, and AI-driven analytics to solve business challenges.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Ashwini Benni | Portfolio</p>
     </footer>
+
+    <script>
+        function openAboutSlide() {
+            document.getElementById('about-slide').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
