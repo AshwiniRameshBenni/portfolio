@@ -1,12 +1,21 @@
-/* General Styles */
-body {
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    color: white;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Hero Section */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+/* ====== HERO SECTION ====== */
 .hero {
     height: 100vh;
     background: url('background.jpg') no-repeat center center/cover;
@@ -14,16 +23,34 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+/* Dark Overlay for Better Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 10px;
+    opacity: 0.9;
 }
 
 .hero-icons {
@@ -32,24 +59,36 @@ body {
 
 .hero-icons .icon {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: transform 0.3s ease;
 }
 
 .hero-icons .icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
-/* Navigation Page */
+/* ====== NAVIGATION PAGE ====== */
 .navigation-page {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('navigation-background.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+/* Dark Overlay */
+.navigation-page::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,13 +100,14 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border: 2px solid white;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .nav-item i {
@@ -75,10 +115,11 @@ body {
 }
 
 .nav-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
-/* About Page */
+/* ====== ABOUT PAGE ====== */
 .about-page {
     display: flex;
     align-items: center;
@@ -86,83 +127,115 @@ body {
     min-height: 100vh;
     background: white;
     color: black;
-    padding: 50px;
+    padding: 60px;
 }
 
 .about-container {
     display: flex;
-    max-width: 900px;
-    gap: 40px;
+    max-width: 1000px;
+    gap: 50px;
 }
 
 .about-image img {
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
+    width: 280px;
+    height: 320px;
+    border-radius: 15px;
     object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 1.8;
 }
 
-/* Experience Slider */
-.slider {
+/* ====== EXPERIENCE PAGE ====== */
+.experience-container {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
-.slide {
-    position: absolute;
+/* Split Layout */
+.experience-section {
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+
+/* Left Side - Experience Details */
+.experience-left {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.experience-left h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffcc00;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.experience-left p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.experience-left ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.experience-left ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    list-style-type: "✔ ";
+    color: #f0f0f0;
+}
+
+/* Right Side - Background Image & Logo */
+.experience-right {
+    width: 50%;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    position: relative;
 }
 
-.content {
+.experience-right::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Logo Overlay */
+.experience-right .overlay {
+    position: relative;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    width: 50%;
+    padding: 20px;
+    border-radius: 15px;
 }
 
-.slide h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.slide p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.slide ul {
-    text-align: left;
-    list-style-type: square;
-}
-
-.slide li {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.slide.active {
-    opacity: 1;
+.experience-right img {
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.3));
 }
 
 /* Navigation Arrows */
@@ -170,26 +243,28 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 24px;
+    padding: 15px 20px;
+    font-size: 28px;
     cursor: pointer;
     border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.5);
 }
 
-/* Footer */
+/* ====== FOOTER ====== */
 footer {
     text-align: center;
-    padding: 10px;
-    background: black;
-    color: white;
+    padding: 15px;
+    background: #0d0d0d;
+    color: #aaa;
+    font-size: 0.9rem;
 }
