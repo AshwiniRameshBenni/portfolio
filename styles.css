@@ -1,23 +1,29 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
     height: 100vh;
     background: url('background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-direction: column;
-    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 .hero-icons {
@@ -25,9 +31,8 @@ body {
 }
 
 .hero-icons .icon {
-    font-size: 2rem;
     color: white;
-    text-decoration: none;
+    font-size: 2rem;
     transition: transform 0.3s ease;
 }
 
@@ -53,106 +58,138 @@ body {
 }
 
 .nav-item {
-    font-size: 1.8rem;
-    color: white;
     text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
     padding: 15px 30px;
     border: 2px solid white;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: all 0.3s ease;
 }
 
 .nav-item i {
-    margin-right: 10px;
+    font-size: 1.8rem;
 }
 
 .nav-item:hover {
-    background-color: white;
-    color: #243b55;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* About Page */
 .about-page {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    min-height: 100vh;
+    background: white;
+    color: black;
+    padding: 50px;
 }
 
 .about-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 1200px;
-    gap: 50px;
+    max-width: 900px;
+    gap: 40px;
 }
 
 .about-image img {
-    width: 300px;
-    height: auto;
+    width: 250px;
+    height: 300px;
     border-radius: 10px;
-}
-
-.about-text {
-    max-width: 600px;
+    object-fit: cover;
 }
 
 .about-text h2 {
     font-size: 2rem;
-    color: #333;
+    margin-bottom: 15px;
 }
 
 .about-text p {
     font-size: 1.2rem;
-    color: #555;
+    line-height: 1.6;
 }
 
-/* Experience Pages */
-.experience-page {
-    height: auto;
-    padding: 50px;
+/* Experience Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* ROMARK LOGISTICS Background */
-.romark {
-    background: url('romark-background.jpg') no-repeat center center/cover;
-}
-
-/* SLK SOFTWARE Background */
-.slk {
-    background: url('slk-background.jpg') no-repeat center center/cover;
-}
-
-.experience-container {
-    width: 80%;
-    max-width: 1200px;
-    background: rgba(255, 255, 255, 0.95);
+.content {
+    background: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
 }
 
-.experience-container h2 {
+.slide h2 {
     font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.slide p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.slide ul {
+    text-align: left;
+    list-style-type: square;
+}
+
+.slide li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+footer {
     text-align: center;
-    margin-bottom: 30px;
-    color: #243b55;
+    padding: 10px;
+    background: black;
+    color: white;
 }
-
-.experience-item {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #f8f8f8;
-    border-left: 5px solid #243b55;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.experience-item h3 {
-    font-size: 1.
