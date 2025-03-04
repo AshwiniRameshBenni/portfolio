@@ -90,6 +90,7 @@ nav ul li a {
 .experience {
     padding: 60px;
     text-align: center;
+    background: #121212;
 }
 
 .experience-container {
@@ -102,13 +103,23 @@ nav ul li a {
     width: 250px;
     background: white;
     color: black;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
 }
 
 .exp-card img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* Projects Section */
@@ -142,11 +153,6 @@ nav ul li a {
     padding: 60px;
     text-align: center;
     background: #111;
-}
-
-.contact form {
-    max-width: 500px;
-    margin: auto;
 }
 
 .contact input, .contact textarea {
