@@ -39,7 +39,7 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
-/* Hero Section */
+/* ====== HERO SECTION ====== */
 .hero {
     height: 100vh;
     background: url('background.jpg') no-repeat center center/cover;
@@ -47,10 +47,31 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    color: white;
+}
+
+/* Dark Overlay for Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .hero-content span {
@@ -60,20 +81,41 @@ nav ul li a {
 .hero-content p {
     font-size: 1.5rem;
     margin-top: 10px;
+    opacity: 0.9;
 }
 
+/* Call-to-Action Button */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
     background: #ffcc00;
     color: black;
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
 
-/* About Section */
+.btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Hero Section Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== ABOUT SECTION ====== */
 .about {
     padding: 80px 10%;
     background: linear-gradient(135deg, #1e1e1e, #292929);
@@ -114,36 +156,155 @@ nav ul li a {
     color: #ffcc00;
 }
 
-/* Experience Section */
+/* ====== EXPERIENCE SECTION ====== */
 .experience {
     padding: 60px;
     text-align: center;
-    background: #121212;
+    background: #1e1e1e;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 30px;
 }
 
 .experience-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .exp-card {
-    width: 250px;
+    width: 280px;
     background: white;
     color: black;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 .exp-card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Footer */
+.exp-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.exp-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* ====== CONTACT SECTION ====== */
+.contact {
+    padding: 80px 10%;
+    background: #292929;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: #3a3a3a;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #ffcc00;
+}
+
+/* Submit Button */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffcc00;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
 footer {
     text-align: center;
     padding: 15px;
     background: black;
+}
+
+/* ====== RESPONSIVE FIXES ====== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        padding: 50px 5%;
+    }
+
+    form {
+        width: 100%;
+    }
 }
