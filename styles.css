@@ -75,15 +75,43 @@ nav ul li a {
 
 /* About Section */
 .about {
-    padding: 60px;
-    text-align: center;
-    background: white;
-    color: black;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about img {
-    width: 200px;
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #ffcc00;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
 }
 
 /* Experience Section */
@@ -107,66 +135,10 @@ nav ul li a {
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .exp-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
-}
-
-.exp-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Projects Section */
-.projects {
-    padding: 60px;
-    text-align: center;
-    background: #222;
-}
-
-.project-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project-card {
-    width: 250px;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Contact Section */
-.contact {
-    padding: 60px;
-    text-align: center;
-    background: #111;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.contact button {
-    padding: 10px 20px;
-    background: #ffcc00;
-    color: black;
-    border: none;
-    cursor: pointer;
 }
 
 /* Footer */
