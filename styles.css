@@ -65,36 +65,11 @@ nav ul li a:hover {
     color: #ff6600;
 }
 
-/* About Section */
-.about {
-    padding: 80px 10%;
-    background: #f4f4f4;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-container {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.about-image img {
-    width: 250px;
-    border-radius: 50%;
-}
-
-.about-text {
-    max-width: 600px;
-}
-
 /* Experience Section */
 .experience {
     padding: 60px;
     text-align: center;
-    background: #ffffff;
+    background: #f4f4f4;
 }
 
 .experience-container {
@@ -104,25 +79,32 @@ nav ul li a:hover {
 }
 
 .exp-card {
-    width: 280px;
+    width: 350px;
     background: white;
     color: black;
     border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
+    padding: 25px;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .exp-card:hover {
     transform: scale(1.05);
 }
 
-/* Contact Section */
-.contact {
-    padding: 80px 10%;
-    background: #f4f4f4;
-    text-align: center;
-    color: black;
+.exp-card h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+}
+
+.exp-card ul {
+    padding-left: 20px;
+}
+
+.exp-card li {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Footer */
@@ -131,12 +113,4 @@ footer {
     padding: 15px;
     background: black;
     color: white;
-}
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-    .experience-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
