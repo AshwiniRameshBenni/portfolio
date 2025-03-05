@@ -162,6 +162,18 @@ nav ul li a:hover {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Experience Detail Page */
+.experience-detail {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Experience Header */
 .experience-header {
     background: linear-gradient(135deg, #ffcc00, #ff6600);
@@ -205,6 +217,50 @@ nav ul li a:hover {
     color: #333;
     line-height: 1.6;
 }
+
+/* Next Page Button */
+.next-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff6600;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.next-btn:hover {
+    background: #cc5500;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-detail {
+        padding: 20px;
+    }
+
+    .experience-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .experience-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-content li {
+        font-size: 1rem;
+    }
+
+    .next-btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
+
 
 /* Next Page Button */
 .next-btn {
