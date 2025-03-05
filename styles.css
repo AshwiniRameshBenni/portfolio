@@ -150,73 +150,103 @@ nav ul li a:hover {
     color: #ff9900;
 }
 
-/* ====== EXPERIENCE SECTION ====== */
-.experience {
-    padding: 60px;
-    text-align: center;
-    background: #f4f4f4;
-}
-
-.experience h2 {
-    font-size: 2.5rem;
-    color: #ff9900;
-    margin-bottom: 30px;
-}
-
-.experience-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.exp-card {
-    width: 280px;
+/* Experience Detail Page */
+.experience-detail {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
     background: white;
     color: black;
-    border-radius: 15px;
-    padding: 20px;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Header */
+.experience-header {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience-header p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Experience Content */
+.experience-content {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.experience-content h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.experience-content ul {
+    padding-left: 20px;
+}
+
+.experience-content li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    list-style: "✔ ";
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Next Page Button */
+.next-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff6600;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.exp-card:hover {
+.next-btn:hover {
+    background: #cc5500;
     transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.exp-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-detail {
+        padding: 20px;
+    }
 
-.exp-card h3 {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
+    .experience-header h2 {
+        font-size: 1.8rem;
+    }
 
-/* ====== CONTACT SECTION ====== */
-.contact {
-    padding: 80px 10%;
-    background: linear-gradient(135deg, #292929, #1e1e1e);
-    text-align: center;
-    color: white;
-}
+    .experience-content h3 {
+        font-size: 1.3rem;
+    }
 
-.contact h2 {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
+    .experience-content li {
+        font-size: 1rem;
+    }
 
-.contact p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    opacity: 0.8;
+    .next-btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
 }
 
 /* Contact Form */
