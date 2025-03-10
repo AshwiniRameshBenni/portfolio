@@ -51,16 +51,16 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* ======= Hero Section ======= */
+/* ======= Hero Section (Home) ======= */
 .hero {
-    height: 100vh;
+    height: 85vh; /* Reduced height to fix spacing */
     background: url('background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 20px 10%;
 }
 
 .hero-content h1 {
@@ -98,8 +98,9 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    padding: 100px 10%;
+    padding: 60px 10%; /* Reduced padding to fix spacing */
     background: #ffffff;
+    scroll-margin-top: 80px; /* Fixes spacing when navigating */
 }
 
 .about-container {
@@ -251,7 +252,6 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-
 /* ======= Contact Section ======= */
 .contact {
     padding: 50px 10%;
@@ -280,56 +280,6 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-.contact-item i {
-    font-size: 2rem;
-    color: #007bff;
-    background: #eaf4ff;
-    padding: 15px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.contact-item h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.contact-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Contact Footer */
-.contact-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #eaeaea;
-    border-radius: 10px;
-}
-
-.contact-footer h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: #007bff;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #0056b3;
-}
-
 /* ======= Footer ======= */
 footer {
     text-align: center;
@@ -339,22 +289,14 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-    }
-}
-
 /* ======= Responsive Design ======= */
 @media (max-width: 768px) {
     .hero {
         height: 70vh;
+    }
+
+    .about-page {
+        padding: 50px 5%; /* Further reduce spacing */
     }
 
     .hero-content h1 {
@@ -397,11 +339,7 @@ footer {
         text-align: center;
     }
 
-    .experience-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    .experience-container,
     .contact-container {
         flex-direction: column;
         align-items: center;
