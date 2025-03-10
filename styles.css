@@ -53,7 +53,7 @@ nav ul li a:hover {
 
 /* ======= Hero Section (Home) ======= */
 .hero {
-    height: 85vh; /* Reduced height to fix spacing */
+    height: 80vh; /* Adjusted height */
     background: url('background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -93,74 +93,76 @@ nav ul li a:hover {
 }
 
 /* ======= About Section ======= */
-/* ======= Fix Spacing Between Hero & About Section ======= */
-.hero {
-    height: 80vh; /* Adjusted height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px 10%;
-}
-
 .about-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    padding: 100px 10%; /* Adjusted padding */
+    padding: 80px 10%;
     background: #ffffff;
+    text-align: center;
     scroll-margin-top: 100px; /* Fixes spacing when scrolling */
 }
 
+/* About Title with Underline */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
 
-/* Adjust Image */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 8px auto 0;
+}
+
+/* About Content */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: left;
+}
+
+/* About Image */
 .about-image img {
-    width: 300px;
+    width: 320px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* About Text */
 .about-text {
-    max-width: 550px;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.about-text p {
+    max-width: 600px;
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
 }
 
-/* Buttons for Resume & Contact */
-.about-buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
+/* About Links */
+.about-links {
+    margin-top: 15px;
 }
 
-.about-buttons a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-    background: #007bff;
-    padding: 12px 18px;
-    border-radius: 8px;
+.about-link {
     display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1rem;
     transition: 0.3s ease-in-out;
 }
 
-.about-buttons a:hover {
-    background: #0056b3;
+.about-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* ======= Experience Section ======= */
@@ -204,55 +206,6 @@ nav ul li a:hover {
 .exp-card li {
     font-size: 1rem;
     line-height: 1.5;
-}
-
-/* ======= Projects Section ======= */
-.projects {
-    padding: 80px 10%;
-    text-align: center;
-    background: #ffffff;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    width: 400px;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    text-align: left;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    color: #ff6600;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.project-card ul {
-    padding-left: 20px;
-}
-
-.project-card li {
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 /* ======= Contact Section ======= */
@@ -302,44 +255,28 @@ footer {
         padding: 50px 5%; /* Further reduce spacing */
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .hero-content .btn {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
-
     .about-container {
         flex-direction: column;
         text-align: center;
     }
 
     .about-image img {
-        width: 220px;
+        width: 260px;
     }
 
-    .about-text h2 {
-        font-size: 2rem;
+    .about-text {
+        text-align: center;
+        max-width: 100%;
     }
 
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .about-buttons {
+    .about-links {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .about-buttons a {
-        width: 80%;
-        text-align: center;
+    .about-link {
+        margin: 5px 0;
     }
 
     .experience-container,
