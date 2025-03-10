@@ -8,10 +8,10 @@
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #ffffff;
+/* Fix Default Browser Margin */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* ======= Navigation Bar ======= */
@@ -136,7 +136,7 @@ nav ul li a:hover {
 .about-buttons {
     margin-top: 20px;
     display: flex;
-    gap: 20px;  /* Added spacing between buttons */
+    gap: 20px;
 }
 
 .about-buttons a {
@@ -160,7 +160,7 @@ footer {
     padding: 15px;
     background: black;
     color: white;
-    margin-top: 50px;  /* Increased margin for better spacing */
+    margin-top: 50px;
 }
 
 /* ======= Responsive Design ======= */
@@ -209,3 +209,4 @@ footer {
         text-align: center;
     }
 }
+
