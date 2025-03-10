@@ -10,15 +10,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: #333;
     background-color: #ffffff;
 }
 
-/* Navigation Bar */
+/* ======= Navigation Bar ======= */
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     padding: 15px;
     z-index: 1000;
 }
@@ -44,19 +44,20 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* Hero Section */
+/* ======= Hero Section ======= */
 .hero {
-    height: 100vh;
+    height: 90vh;
     background: url('background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -65,163 +66,33 @@ nav ul li a:hover {
     color: #ff6600;
 }
 
-/* Experience Section */
-.experience {
-    padding: 60px;
-    text-align: center;
-    background: #f4f4f4;
-}
-
-.experience-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.exp-card {
-    width: 350px;
-    background: white;
-    color: black;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: left;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.exp-card:hover {
-    transform: scale(1.05);
-}
-
-.exp-card h3 {
+.hero-content p {
     font-size: 1.5rem;
-    color: #ff6600;
+    margin: 10px 0;
 }
 
-.exp-card ul {
-    padding-left: 20px;
-}
-
-.exp-card li {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: black;
-    color: white;
-}
-
-/* ====== CONTACT SECTION ====== */
-.contact {
-    padding: 80px 10%;
-    background: #f8f9fa;
-    text-align: center;
-    color: #333;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    border-bottom: 3px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Contact Container */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.contact-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-    width: 250px;
-}
-
-.contact-item:hover {
-    transform: scale(1.05);
-}
-
-.contact-item i {
-    font-size: 2rem;
-    color: #007bff;
-    background: #eaf4ff;
-    padding: 15px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.contact-item h4 {
+.hero-content .btn {
+    text-decoration: none;
     font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+    color: white;
+    background: #ff6600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
 }
 
-.contact-item p {
-    font-size: 1rem;
-    color: #555;
+.hero-content .btn:hover {
+    background: #cc5500;
 }
 
-/* Contact Footer */
-.contact-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #eaeaea;
-    border-radius: 10px;
-}
-
-.contact-footer h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: #007bff;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-item {
-        width: 90%;
-    }
-}
-
-/* ======= About Page Styling ======= */
+/* ======= About Section ======= */
 .about-page {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
     padding: 80px 10%;
     background: #ffffff;
 }
@@ -230,14 +101,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     max-width: 1000px;
     width: 100%;
 }
 
 /* Adjust Image */
 .about-image img {
-    width: 280px;
+    width: 300px;
     height: auto;
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -252,7 +123,7 @@ footer {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #333;
+    color: #222;
 }
 
 .about-text p {
@@ -261,15 +132,62 @@ footer {
     color: #555;
 }
 
+/* Buttons for Resume & Contact */
+.about-buttons {
+    margin-top: 20px;
+}
+
+.about-buttons a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background: #007bff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.about-buttons a:hover {
+    background: #0056b3;
+}
+
+/* ======= Footer ======= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: black;
+    color: white;
+    margin-top: 30px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .hero-content .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
     }
 
     .about-image img {
-        width: 200px;
+        width: 220px;
     }
 
     .about-text h2 {
@@ -278,5 +196,10 @@ footer {
 
     .about-text p {
         font-size: 1rem;
+    }
+
+    .about-buttons a {
+        display: block;
+        margin-bottom: 10px;
     }
 }
