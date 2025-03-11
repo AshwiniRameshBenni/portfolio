@@ -437,3 +437,44 @@ nav ul li a:hover {
         margin: 0 5px;
     }
 }
+/* ======= Global Section Styling (Ensures One Page per Section) ======= */
+section {
+    min-height: 100vh; /* Each section takes the full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======= Hero Section (First Page) ======= */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background: url('background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* ======= About Section (Second Page) ======= */
+.about-page {
+    background: #ffffff;
+    padding: 80px 10%;
+}
+
+/* ======= Experience Section (Third Page) ======= */
+.experience {
+    background: #f4f4f4;
+    padding: 80px 10%;
+}
+
+/* ======= Projects Section (Fourth Page) ======= */
+.projects {
+    background: #ffffff;
+    padding: 80px 10%;
+}
+
+/* ======= Contact Section (Fifth Page) ======= */
+.contact {
+    background: #f8f9fa;
+    padding: 80px 10%;
+}
